@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Tra cứu từ Hán Việt</title>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-chosen.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
@@ -11,7 +12,7 @@
 <body>
 
 <form action="index" method="POST" id="frmStudent_index">
-<input type="hidden" name="_token" value="{{ csrf_token() }}">
+<input type="hidden" name="_token" value="{!! csrf_token() !!}">
 <section class="content-wrapper">
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-mortar-board fa-3"></i></a></li>
@@ -78,14 +79,20 @@
 </div>
 
 <script src="js/jquery-3.1.1.js"></script>
-<script src="js/chosen.jquery.min.js"></script>
 <script src="js/jquery-comfirm.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-confirmation.js"></script>
+<script src="js/chosen-jquery.min.js"></script>
 <script src="js/app.min.js"></script>
 <script src="js/jquery.validate.js"></script>
 <script src="js/Js_Student.js"></script>
-
+<script type="text/javascript">
+    $.ajaxSetup({
+    headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    }
+});
+</script>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
         loadIndex();
