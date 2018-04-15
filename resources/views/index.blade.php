@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Tra cứu từ Hán Việt</title>
-    <base href="{{asset('')}}">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap-chosen.css">
     <link rel="stylesheet" type="text/css" href="css/style.min.css">
@@ -79,7 +78,7 @@
 </div>
 
 <script src="js/jquery-3.1.1.js"></script>
-<script src="js/chosen-jquery.min.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
 <script src="js/jquery-comfirm.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-confirmation.js"></script>
