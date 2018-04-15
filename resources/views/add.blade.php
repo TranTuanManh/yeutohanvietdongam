@@ -64,6 +64,28 @@
 				    	</div><br>
 
 				    	<div class="row form-group">
+				    		<label class="col-md-2 control-label">Tầm nguyên chữ Hán:</label>
+				    		<div class="col-md-8">
+				    		@if($arrStudent)
+				    			<textarea class="form-control input-lg" type="text" id="tamnguyen" name="tamnguyen" value="" style="height: 120px">{{$arrStudent['tamnguyen']}}</textarea>
+				    		@else
+				    			<textarea class="form-control input-lg" type="text" id="tamnguyen" name="tamnguyen" value="" style="height: 120px"></textarea>
+				    		@endif
+				    		</div>
+				    	</div><br>
+
+				    	<div class="row form-group">
+				    		<label class="col-md-2 control-label">Thành ngữ Hán Việt:</label>
+				    		<div class="col-md-8">
+				    		@if($arrStudent)
+				    			<input class="form-control input-lg" type="text" id="thanhngu" name="thanhngu" value="{{$arrStudent['thanhngu']}}">
+				    		@else
+				    			<input class="form-control input-lg" type="text" id="thanhngu" name="thanhngu" value="">
+				    		@endif
+				    		</div>
+				    	</div><br>
+
+				    	<div class="row form-group">
 				    		<label class="col-md-2 control-label">Trạng thái:</label>
 				    		<div class="col-md-8">
 			                <select id="status" name="status" class="form-control chzn-select input-sm" message="">
@@ -71,7 +93,10 @@
                                 <option value="false">Ẩn</option>
                             </select>
                         	</div>
-			            </div>
+			            </div><br>
+			            <div class="row form-group">
+			            <label class="col-md-8 control-label" style="color: red">Lưu ý: những mục đánh dấu (*) bắt buộc phải điền</label>
+			        	</div>
 				</div>
 			</div>
 		</div>

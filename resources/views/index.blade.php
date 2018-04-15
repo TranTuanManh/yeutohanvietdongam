@@ -27,7 +27,7 @@
                         <div class="row ">
                             <br><label class="control-label col-md-4">{{Lang::get('Student.search')}} theo Hán Việt</label>
                             <div class="col-md-8 text-right">
-                                <input name="search_string" class="form-control input-sm" placeholder="Nhập từ Hán Việt hoặc chữ Hán rồi click vào nút tìm kiếm..." type="text">
+                                <input name="search_string" class="form-control input-sm" placeholder="Nhập từ Hán Việt hoặc chữ Hán..." type="text">
                             </div>
                         </div>
                     </div>
@@ -52,10 +52,12 @@
                 <table class="table table-striped table-bordered dataTable no-footer" align="center" id="table-data">
                     <col width="5%">
                     <col width="5%">
-                    <col width="15%">
-                    <col width="15%">
-                    <col width="35%">
-                    <col width="25%">
+                    <col width="8%">
+                    <col width="8%">
+                    <col width="20%">
+                    <col width="14%">
+                    <col width="20%">
+                    <col width="20%">
                     <thead class="thead-inverse">
                     <tr class="header">
                     <td align="center"><b><input name="chk_all_item_id" onclick="checkbox_all_item_id(document.forms[0].chk_item_id);" type="checkbox"></b></td>
@@ -64,6 +66,8 @@
                         <td align="center"><b>{{Lang::get('Student.chuHan')}}</b></td>
                         <td align="center"><b>{{Lang::get('Student.yNghia')}}</b></td>
                         <td align="center"><b>{{Lang::get('Student.tuDongAm')}}</b></td>
+                        <td align="center"><b>{{Lang::get('Student.tamnguyen')}}</b></td>
+                        <td align="center"><b>{{Lang::get('Student.thanhngu')}}</b></td>
                     </tr>
                     </thead>
                     <tbody></tbody>

@@ -29,6 +29,17 @@ class PageController extends Controller
         $objResult = $TiengHanVietModel->_getAll($params);
         $arrResult = $objResult->toArray();
         $data = $arrResult['data'];
+        if($data) {
+            for($i = 0; $i < count($data); $i++) {
+                if(is_null($data[$i]['tamnguyen'])){
+                    $data[$i]['tamnguyen'] = "";
+                }
+
+                if(is_null($data[$i]['thanhngu'])){
+                    $data[$i]['thanhngu'] = "";
+                }
+            }
+        }   
         return \Response::JSON(array(
                'Dataloadlist'  => $data, 
                'pagination' => (string) $objResult->links('pagination'),
@@ -50,6 +61,8 @@ class PageController extends Controller
         $TiengHanVietModel->chuHan = $request->chuHan;
         $TiengHanVietModel->yNghia = $request->yNghia;
         $TiengHanVietModel->tuDongAm = $request->tuDongAm;
+        $TiengHanVietModel->tamnguyen = $request->tamnguyen;
+        $TiengHanVietModel->thanhngu = $request->thanhngu;
         $TiengHanVietModel->save();
         return array('success' => true, 'message' => 'Cập nhật thành công');
     }
@@ -61,6 +74,8 @@ class PageController extends Controller
         $arrStudent['chuHan']  = $TiengHanVietModel->chuHan;
         $arrStudent['yNghia']  = $TiengHanVietModel->yNghia;
         $arrStudent['tuDongAm']  = $TiengHanVietModel->tuDongAm;
+        $arrStudent['tamnguyen']  = $TiengHanVietModel->tamnguyen;
+        $arrStudent['thanhngu']  = $TiengHanVietModel->thanhngu;
         $data['arrStudent'] = $arrStudent;
         return view('add',$data);
     }
@@ -73,6 +88,8 @@ class PageController extends Controller
         $TiengHanVietModel->chuHan = $request->chuHan;      
         $TiengHanVietModel->yNghia = $TiengHanVietModel->yNghia;
         $TiengHanVietModel->tuDongAm = $request->tuDongAm;
+        $TiengHanVietModel->tamnguyen = $request->tamnguyen;
+        $TiengHanVietModel->thanhngu = $request->thanhngu;
         $TiengHanVietModel->save();
         return array('success' => true, 'message' => 'Cập nhật thành công');
     }

@@ -29,7 +29,7 @@ class TiengHanVietModel extends Model
               $query1->where('tuHanViet', 'LIKE','%' . $searchString .'%')->orWhere('chuHan', 'LIKE','%' . $searchString .'%');
             });
           }
-          $query->select('id', 'tuHanViet', 'chuHan', 'yNghia','tuDongAm');
+          $query->select('id', 'tuHanViet', 'chuHan', 'yNghia','tuDongAm', 'tamnguyen', 'thanhngu');
           $query->orderBy('tuHanViet');
           return $query->paginate($perPage);      
     }

@@ -20,11 +20,13 @@ return [
 	'tuHanViet' => 'Từ Hán Việt',
 	'chuHan' => 'Chữ Hán',
 	'yNghia' => ' Ý Nghĩa',
-	'tuDongAm' => 'Các Từ Đồng Âm',
+	'tuDongAm' => 'Các từ Hán Việt có yếu tố đồng âm',
 	'action' => 'Hành Động',
 	'page_next' => 'Trước',
     'page_prev' => 'Tiếp',
     'page_list' => 'Danh sách có',
     'page_namelist' => 'từ',
     'page_viewselect' => 'Hiển thị',
+    'tamnguyen' => 'Tầm nguyên chữ Hán',
+    'thanhngu' => 'Thành ngữ Hán Việt'
 ];	
