@@ -28,5 +28,7 @@ return [
     'page_namelist' => 'từ',
     'page_viewselect' => 'Hiển thị',
     'tamnguyen' => 'Tầm nguyên chữ Hán',
-    'thanhngu' => 'Thành ngữ Hán Việt'
+    'thanhngu' => 'Thành ngữ Hán Việt',
+    'dongAmNom' => 'Đồng âm Nôm (từ thuần Việt)',
+    'chuThich' => 'Chú thích'
 ];	

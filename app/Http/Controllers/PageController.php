@@ -38,6 +38,14 @@ class PageController extends Controller
                 if(is_null($data[$i]['thanhngu'])){
                     $data[$i]['thanhngu'] = "";
                 }
+
+                if(is_null($data[$i]['dongAmNom'])){
+                    $data[$i]['dongAmNom'] = "";
+                }
+
+                if(is_null($data[$i]['chuThich'])){
+                    $data[$i]['chuThich'] = "";
+                }
             }
         }   
         return \Response::JSON(array(
@@ -63,6 +71,8 @@ class PageController extends Controller
         $TiengHanVietModel->tuDongAm = $request->tuDongAm;
         $TiengHanVietModel->tamnguyen = $request->tamnguyen;
         $TiengHanVietModel->thanhngu = $request->thanhngu;
+        $TiengHanVietModel->dongAmNom = $request->dongAmNom;
+        $TiengHanVietModel->chuThich = $request->chuThich;
         $TiengHanVietModel->save();
         return array('success' => true, 'message' => 'Cập nhật thành công');
     }
@@ -76,6 +86,8 @@ class PageController extends Controller
         $arrStudent['tuDongAm']  = $TiengHanVietModel->tuDongAm;
         $arrStudent['tamnguyen']  = $TiengHanVietModel->tamnguyen;
         $arrStudent['thanhngu']  = $TiengHanVietModel->thanhngu;
+        $arrStudent['dongAmNom']  = $TiengHanVietModel->dongAmNom;
+        $arrStudent['chuThich']  = $TiengHanVietModel->chuThich;
         $data['arrStudent'] = $arrStudent;
         return view('add',$data);
     }
@@ -90,6 +102,8 @@ class PageController extends Controller
         $TiengHanVietModel->tuDongAm = $request->tuDongAm;
         $TiengHanVietModel->tamnguyen = $request->tamnguyen;
         $TiengHanVietModel->thanhngu = $request->thanhngu;
+        $TiengHanVietModel->dongAmNom = $request->dongAmNom;
+        $TiengHanVietModel->chuThich = $request->chuThich;
         $TiengHanVietModel->save();
         return array('success' => true, 'message' => 'Cập nhật thành công');
     }

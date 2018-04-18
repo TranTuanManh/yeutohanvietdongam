@@ -119,6 +119,8 @@ loadList = function(oForm){
             $html += '<td class="data" ondblclick="" onclick="{select_row(this);}" align="center">' + data[x].tuDongAm + '</td>';
             $html += '<td class="data" ondblclick="" onclick="{select_row(this);}" align="center">' + data[x].tamnguyen + '</td>';
             $html += '<td class="data" ondblclick="" onclick="{select_row(this);}" align="center">' + data[x].thanhngu + '</td>';
+            $html += '<td class="data" ondblclick="" onclick="{select_row(this);}" align="center">' + data[x].dongAmNom + '</td>';
+            $html += '<td class="data" ondblclick="" onclick="{select_row(this);}" align="center">' + data[x].chuThich + '</td>';
             $html += '</tr>';
           }
         }

@@ -86,6 +86,28 @@
 				    	</div><br>
 
 				    	<div class="row form-group">
+				    		<label class="col-md-2 control-label">Đồng âm nôm(từ thuần Việt):</label>
+				    		<div class="col-md-8">
+				    		@if($arrStudent)
+				    			<input class="form-control input-lg" type="text" id="dongAmNom" name="dongAmNom" value="{{$arrStudent['dongAmNom']}}">
+				    		@else
+				    			<input class="form-control input-lg" type="text" id="dongAmNom" name="dongAmNom" value="">
+				    		@endif
+				    		</div>
+				    	</div><br>
+
+				    	<div class="row form-group">
+				    		<label class="col-md-2 control-label">Chú thích:</label>
+				    		<div class="col-md-8">
+				    		@if($arrStudent)
+				    			<textarea class="form-control input-lg" type="text" id="chuThich" name="chuThich" value="" style="height: 120px">{{$arrStudent['chuThich']}}</textarea>
+				    		@else
+				    			<textarea class="form-control input-lg" type="text" id="chuThich" name="chuThich" value="" style="height: 120px"></textarea>
+				    		@endif
+				    		</div>
+				    	</div><br>
+
+				    	<div class="row form-group">
 				    		<label class="col-md-2 control-label">Trạng thái:</label>
 				    		<div class="col-md-8">
 			                <select id="status" name="status" class="form-control chzn-select input-sm" message="">

@@ -54,10 +54,12 @@
                     <col width="5%">
                     <col width="8%">
                     <col width="8%">
-                    <col width="20%">
-                    <col width="14%">
-                    <col width="20%">
-                    <col width="20%">
+                    <col width="12%">
+                    <col width="12%">
+                    <col width="12%">
+                    <col width="12%">
+                    <col width="8%">
+                    <col width="12%">
                     <thead class="thead-inverse">
                     <tr class="header">
                     <td align="center"><b><input name="chk_all_item_id" onclick="checkbox_all_item_id(document.forms[0].chk_item_id);" type="checkbox"></b></td>
@@ -68,6 +70,8 @@
                         <td align="center"><b>{{Lang::get('Student.tuDongAm')}}</b></td>
                         <td align="center"><b>{{Lang::get('Student.tamnguyen')}}</b></td>
                         <td align="center"><b>{{Lang::get('Student.thanhngu')}}</b></td>
+                        <td align="center"><b>{{Lang::get('Student.dongAmNom')}}</b></td>
+                        <td align="center"><b>{{Lang::get('Student.chuThich')}}</b></td>
                     </tr>
                     </thead>
                     <tbody></tbody>
@@ -86,7 +90,7 @@
 <script src="js/jquery-comfirm.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-confirmation.js"></script>
-<script src="js/chosen-jquery.min.js"></script>
+<script src="js/chosen.jquery.min.js"></script>
 <script src="js/app.min.js"></script>
 <script src="js/jquery.validate.js"></script>
 <script src="js/Js_Student.js"></script>
